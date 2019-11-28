@@ -1,12 +1,12 @@
 <h2><%= current_user.name %>さんのタスク一覧</h2>
 
-<ul>
-  <% @tasks.each do |task| %>
-    <li><%= link_to task.id, task_path(task) %> : <%= task.content %> &gt; <%= task.status %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li><%= link_to task.id, task_path(task) %> : <%= task.content %> &gt; <%= task.status %></li>
+    <% end %>
+  </ul>
 
-<%= paginate @tasks %>
+  <%= paginate @tasks %>
 
 <%= link_to "新規タスクの作成", new_task_path %>
 </br>
